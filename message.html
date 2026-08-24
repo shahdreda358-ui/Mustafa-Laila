@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>My Love ❤️</title>
-    <link rel="stylesheet" href="./Styles/message.css"> 
+    <link rel="stylesheet" href="./Styles/message.css">
+    <link rel="stylesheet" href="./Styles/music.css">
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <div class="love-page">
         <div class="love-content">
 
-<span class="heart heart1">🌹</span>
+            <span class="heart heart1">🌹</span>
             <span class="heart heart2">🌹</span>
             <span class="heart heart3">🌹</span>
             <span class="heart heart4">🌹</span>
@@ -31,12 +32,48 @@
             <div class="hero-image"></div>
             <section class="surprise-page">
                 <div class="message-box">
+                    <div class="love-music-box">
+
+                        <div class="love-music-icon">
+                            🎵
+                        </div>
+
+                        <div class="love-music-info">
+                            <span class="love-music-title">Our Song ❤️</span>
+                            <span class="love-music-subtitle">A little song for us</span>
+                        </div>
+
+                        <a href="https://youtu.be/00gtYY5YioU?si=BIMNCFUOOg5t14Y1" target="_blank" class="love-music-btn">
+                            ▶
+                        </a>
+
+                    </div>
                     <h1 id="typingText"></h1> <button id="nextBtn" onclick="goNext()"> كمّلي 🤍 </button>
+
                 </div>
             </section>
             <!-- طبقة غامقة فوق الصورة -->
             <div class="overlay"></div>
+            <div class="music-box">
 
+                <div class="music-icon">
+                    🎵
+                </div>
+
+                <div class="music-info">
+                    <span class="music-title">Our Song ❤️</span>
+                    <span class="music-subtitle">A little song for us</span>
+                </div>
+
+                <button class="music-btn" id="musicBtn">
+                    ▶
+                </button>
+
+            </div>
+
+            <iframe id="youtubeMusic" width="0" height="0" src="https://www.youtube.com/embed/00gtYY5YioU?enablejsapi=1"
+                frameborder="0" allow="autoplay">
+            </iframe>
             <!-- القلوب -->
             <span class="heart heart1">🌹</span>
             <span class="heart heart2">🌹</span>

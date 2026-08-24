@@ -1,0 +1,173 @@
+/* ================================
+   LOVE MUSIC BOX
+================================ */
+
+.love-music-box {
+    width: 90%;
+    max-width: 450px;
+
+    margin: 25px auto;
+
+    padding: 14px 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+
+.love-music-box:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Music Icon */
+
+.love-music-icon {
+
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    font-size: 24px;
+}
+
+
+/* Info */
+
+.love-music-info {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.love-music-title {
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+.love-music-subtitle {
+
+    font-size: 12px;
+
+    opacity: 0.75;
+}
+
+
+/* Button */
+
+.love-music-btn {
+
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #d94f70;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+
+.love-music-btn:hover {
+
+    transform: scale(1.1);
+
+    background: #ffe6ec;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .love-music-box {
+
+        width: 92%;
+
+        padding: 12px 14px;
+
+    }
+
+    .love-music-icon {
+
+        width: 45px;
+        height: 45px;
+
+        min-width: 45px;
+
+        font-size: 21px;
+
+    }
+
+    .love-music-title {
+
+        font-size: 14px;
+
+    }
+
+    .love-music-subtitle {
+
+        font-size: 11px;
+
+    }
+
+    .love-music-btn {
+
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+
+    }
+
+}
