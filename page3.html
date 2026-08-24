@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Memories ❤️</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/memories.css">
+
+
+</head>
+
+<body>
+
+    <h1 class="main-title">
+        شوية من حكايتنا ❤️
+    </h1>
+
+    <p class="subtitle">
+        كل صورة وراها حكاية 🥹❤️
+    </p>
+
+
+    <!-- الـ 6 ديفات -->
+
+    <div class="memories">
+
+
+        <!-- DIV 1 -->
+
+        <div class="memory-box" onclick="openMemory(1)">
+
+            <img src="./Images/img-11.jpeg">
+
+            <div class="box-overlay">
+                <h2>❤️Eid Mubark</h2>
+                <p>🥹tap to here</p>
+            </div>
+
+        </div>
+
+
+        <!-- DIV 2 -->
+
+        <div class="memory-box" onclick="openMemory(2)">
+
+            <img src="./Images/img-8.jpeg">
+
+            <div class="box-overlay">
+                <h2>💕أحلى لحظاتنا </h2>
+                <p>🥹tap to here </p>
+            </div>
+
+        </div>
+
+
+        <!-- DIV 3 -->
+
+        <div class="memory-box" onclick="openMemory(3)">
+            <img src="./Images/img-21.jpeg"> 
+            <div class="box-overlay">
+                <h2>❤️Special-Day</h2>
+                <p>🥰tap to here </p>
+            </div>
+
+        </div>
+
+
+        <!-- DIV 4 -->
+
+        <div class="memory-box" onclick="openMemory(4)">
+
+            <img src="./Images/img-24.jpeg">
+
+            <div class="box-overlay">
+                <h2>💗لحظات مميزة </h2>
+                <p>🥹tap to here</p>
+            </div>
+
+        </div>
+
+
+        <!-- DIV 5 -->
+
+        <div class="memory-box" onclick="openMemory(5)">
+
+            <img src="./Images/img-2.jpeg">
+
+            <div class="box-overlay">
+                <h2>ذكريات مش هتتنسي ❤️</h2>
+                <p> 🥰tap to here</p>
+            </div>
+
+        </div>
+
+
+        <!-- DIV 6 -->
+
+        <div class="memory-box" onclick="openMemory(6)">
+
+            <img src="./Images/img-10.jpeg">
+
+            <div class="box-overlay">
+                <h2>بنتي وحبيبه قلبي❤️</h2>
+                <p>tap to here🥹</p>
+            </div>
+
+        </div>
+        <div class="memory-box" onclick="openMemory(7)">
+
+            <img src="./Images/img-15.jpeg">
+
+            <div class="box-overlay">
+                <h2>
+                    Mustafa❤️Laila
+                </h2>
+                <p>tap to here🥹</p>
+            </div>
+
+        </div>
+        <div class="memory-box" onclick="openMemory(8)">
+
+            <img src="./Images/img-7.jpeg">
+
+            <div class="box-overlay">
+                <h2>بحبك❤️❤️</h2>
+                <p>tap to here🥹</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         محتوى الذكريات
+    ========================== -->
+
+    <div id="memoryModal" class="memory-modal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeMemory()">
+                ×
+            </button>
+
+
+            <h2 id="memoryTitle"></h2>
+
+
+            <div class="photo-viewer">
+
+                <button class="photo-btn prev-btn" onclick="previousPhoto()">
+                    ❮
+                </button>
+
+                <div class="flip-card" ondblclick="flipPhoto()">
+
+                    <div class="flip-inner">
+
+                        <!-- الصورة -->
+                        <div class="flip-front">
+                            <img id="currentPhoto" src="" alt="Our Memory ❤️">
+                        </div>
+
+                        <!-- الكلام -->
+                        <div class="flip-back">
+                            <p id="photoBackText"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="photo-btn next-btn" onclick="nextPhoto()">
+                    ❯
+                </button>
+
+            </div>
+
+            <div class="photo-counter" id="photoCounter"></div>
+            <div class="photo-counter" id="photoCounter"></div>
+
+            <p id="memoryText"></p>
+        </div>
+
+    </div>
+
+    <div class="bottom-box">
+        <span> LUNÉVA &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v&nbsp; Made with Love ❤️</span>
+        <a href="https://www.instagram.com/luneva.2846399?igsh=MXdveXN4YWh1M3NjbQ==" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
+    <script src="./Scripts/memories.js"></script>
+    <script src="./Scripts/all.min.js"></script>
+    <script src="./Scripts/main.js"></script>
+
+</body>
+
+</html>

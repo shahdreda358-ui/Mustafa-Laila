@@ -1,0 +1,833 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+ /* =========================
+   BODY
+========================= */
+
+ body {
+     min-height: 100vh;
+
+     padding: 35px 20px;
+
+     font-family: Georgia, serif;
+
+     background:
+         linear-gradient(135deg,
+             #fff0f5,
+             #ffe1ea,
+             #fff7f9);
+
+     color: #71364b;
+ }
+
+
+ /* =========================
+   TITLE
+========================= */
+
+ .main-title {
+     text-align: center;
+
+     font-size: 28px;
+
+     color: #8f405a;
+
+     margin-bottom: 8px;
+ }
+
+
+ .subtitle {
+     text-align: center;
+
+     font-size: 14px;
+
+     color: #a4677c;
+
+     margin-bottom: 35px;
+ }
+
+
+ /* =========================
+   6 MEMORY DIVS
+========================= */
+
+ .memories {
+
+     width: min(950px, 95%);
+
+     margin: auto;
+
+     display: grid;
+
+     grid-template-columns: repeat(3, 1fr);
+
+     gap: 25px;
+ }
+
+
+ /* =========================
+   MEMORY BOX
+========================= */
+
+ .memory-box {
+
+     height: 230px;
+
+     position: relative;
+
+     overflow: hidden;
+
+     border-radius: 22px;
+
+     cursor: pointer;
+
+     box-shadow:
+         0 8px 25px rgba(120, 50, 70, 0.20);
+
+     animation:
+         floating 4s ease-in-out infinite;
+
+     transition:
+         transform 0.3s ease,
+         box-shadow 0.3s ease;
+ }
+
+
+ /* =========================
+   DIFFERENT ANIMATION DELAYS
+========================= */
+
+ .memory-box:nth-child(1) {
+     animation-delay: 0s;
+ }
+
+ .memory-box:nth-child(2) {
+     animation-delay: 0.5s;
+ }
+
+ .memory-box:nth-child(3) {
+     animation-delay: 1s;
+ }
+
+ .memory-box:nth-child(4) {
+     animation-delay: 1.5s;
+ }
+
+ .memory-box:nth-child(5) {
+     animation-delay: 2s;
+ }
+
+ .memory-box:nth-child(6) {
+     animation-delay: 2.5s;
+ }
+
+
+ /* =========================
+   FLOATING ANIMATION
+========================= */
+
+ @keyframes floating {
+
+     0%,
+     100% {
+         transform:
+             translateY(0) rotate(0deg);
+     }
+
+     50% {
+         transform:
+             translateY(-8px) rotate(1deg);
+     }
+ }
+
+
+ /* =========================
+   HOVER
+========================= */
+
+ .memory-box:hover {
+
+     animation-play-state: paused;
+
+     transform:
+         translateY(-10px) scale(1.03);
+
+     box-shadow:
+         0 15px 35px rgba(120, 50, 70, 0.28);
+ }
+
+
+ /* =========================
+   COVER IMAGE
+========================= */
+
+ .memory-box img {
+
+     width: 100%;
+
+     height: 100%;
+
+     object-fit: cover;
+
+     display: block;
+
+     transition:
+         transform 0.5s ease;
+ }
+
+
+ .memory-box:hover img {
+
+     transform:
+         scale(1.07);
+ }
+
+
+ /* =========================
+   IMAGE OVERLAY
+========================= */
+
+ .box-overlay {
+
+     position: absolute;
+
+     inset: 0;
+
+     display: flex;
+
+     flex-direction: column;
+
+     justify-content: flex-end;
+
+     align-items: center;
+
+     text-align: center;
+
+     padding: 25px;
+
+     color: white;
+
+     background:
+         linear-gradient(transparent,
+             rgba(50, 15, 30, 0.75));
+ }
+
+
+ /* =========================
+   OVERLAY TITLE
+========================= */
+
+ .box-overlay h2 {
+
+     font-size: 20px;
+
+     margin-bottom: 5px;
+
+     text-shadow:
+         0 2px 5px rgba(0, 0, 0, 0.3);
+ }
+
+
+ /* =========================
+   OVERLAY TEXT
+========================= */
+
+ .box-overlay p {
+
+     font-size: 13px;
+
+     opacity: 0.9;
+ }
+
+
+ /* =========================
+   MODAL
+========================= */
+
+ .memory-modal {
+
+     display: none;
+
+     position: fixed;
+
+     inset: 0;
+
+     z-index: 100;
+
+     padding: 25px;
+
+     background:
+         rgba(40, 10, 25, 0.75);
+
+     backdrop-filter: blur(7px);
+
+     justify-content: center;
+
+     align-items: center;
+ }
+
+
+ /* =========================
+   MODAL CONTENT
+========================= */
+
+ .modal-content {
+
+     width: min(750px, 95%);
+
+     max-height: 90vh;
+
+     overflow-y: auto;
+
+     position: relative;
+
+     padding: 35px;
+
+     border-radius: 25px;
+
+     background:
+         rgba(255, 255, 255, 0.96);
+
+     text-align: center;
+
+     box-shadow:
+         0 20px 60px rgba(0, 0, 0, 0.30);
+
+     animation:
+         modalAppear 0.4s ease;
+ }
+
+
+ @keyframes modalAppear {
+
+     from {
+         opacity: 0;
+         transform:
+             scale(0.85) translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform:
+             scale(1) translateY(0);
+     }
+ }
+
+
+ /* =========================
+   MODAL TITLE
+========================= */
+
+ .modal-content h2 {
+
+     color: #923f5a;
+
+     font-size: 24px;
+
+     margin-bottom: 20px;
+ }
+
+
+ /* =========================
+   PHOTOS
+========================= */
+
+ .photo-viewer {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 15px;
+
+     width: 100%;
+
+     margin-bottom: 15px;
+ }
+
+
+ .single-photo {
+     width: 500px;
+     height: 350px;
+
+     border-radius: 20px;
+
+     overflow: hidden;
+
+     background: #f8e8ed;
+
+     box-shadow:
+         0 8px 25px rgba(100, 40, 60, 0.18);
+ }
+
+
+ .single-photo img {
+     width: 100%;
+     height: 100%;
+
+     object-fit: cover;
+
+     display: block;
+
+     transition:
+         opacity 0.25s ease,
+         transform 0.3s ease;
+ }
+
+
+ .photo-btn {
+     width: 42px;
+     height: 42px;
+
+     flex-shrink: 0;
+
+     border: none;
+
+     border-radius: 50%;
+
+     background: #d96b88;
+
+     color: white;
+
+     font-size: 20px;
+
+     cursor: pointer;
+
+     transition:
+         0.3s ease;
+ }
+
+
+ .photo-btn:hover {
+     background: #b94d6d;
+
+     transform: scale(1.08);
+ }
+
+
+ .photo-btn:disabled {
+     opacity: 0.3;
+
+     cursor: not-allowed;
+
+     transform: none;
+ }
+
+
+ .photo-counter {
+     text-align: center;
+
+     font-size: 13px;
+
+     color: #a4677c;
+
+     margin-bottom: 12px;
+ }
+
+
+ #memoryText {
+     font-size: 15px;
+
+     line-height: 1.9;
+
+     color: #71364b;
+
+     min-height: 55px;
+
+     padding: 0 15px;
+ }
+
+ @media (max-width: 600px) {
+
+     .photo-viewer {
+         gap: 8px;
+     }
+
+
+     .single-photo {
+         width: 100%;
+         height: 280px;
+     }
+
+
+     .photo-btn {
+         width: 35px;
+         height: 35px;
+
+         font-size: 16px;
+     }
+
+
+     #memoryText {
+         font-size: 14px;
+     }
+
+ }
+
+ /* =========================
+   Flip Photo
+========================= */
+
+ .photo-viewer {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 18px;
+
+     margin-bottom: 15px;
+ }
+
+
+ .flip-card {
+     width: 500px;
+     height: 350px;
+
+     perspective: 1200px;
+
+     cursor: pointer;
+ }
+
+
+ .flip-inner {
+     width: 100%;
+     height: 100%;
+
+     position: relative;
+
+     transition: transform 0.8s ease;
+
+     transform-style: preserve-3d;
+ }
+
+
+ /* لما تتقلب */
+
+ .flip-inner.flipped {
+     transform: rotateY(180deg);
+ }
+
+
+ /* وش وضهر الكارت */
+
+ .flip-front,
+ .flip-back {
+
+     position: absolute;
+
+     width: 100%;
+     height: 100%;
+
+     inset: 0;
+
+     border-radius: 20px;
+
+     overflow: hidden;
+
+     backface-visibility: hidden;
+
+     box-shadow:
+         0 10px 30px rgba(100, 40, 60, 0.2);
+ }
+
+
+ /* الصورة */
+
+ .flip-front {
+     background: white;
+ }
+
+
+ .flip-front img {
+
+     width: 100%;
+     height: 100%;
+
+     object-fit: cover;
+
+     display: block;
+ }
+
+
+ /* ضهر الصورة */
+
+ .flip-back {
+
+     transform: rotateY(180deg);
+
+     background:
+         linear-gradient(135deg,
+             #fff0f5,
+             #ffdce7);
+
+     display: flex;
+
+     justify-content: center;
+     align-items: center;
+
+     text-align: center;
+
+     padding: 35px;
+ }
+
+
+ .flip-back p {
+
+     color: #71364b;
+
+     font-size: 18px;
+
+     line-height: 2;
+
+ }
+
+
+ /* الأسهم */
+
+ .photo-btn {
+
+     width: 42px;
+     height: 42px;
+
+     flex-shrink: 0;
+
+     border: none;
+
+     border-radius: 50%;
+
+     background: #d96b88;
+
+     color: white;
+
+     font-size: 20px;
+
+     cursor: pointer;
+
+     transition: 0.3s ease;
+ }
+
+
+ .photo-btn:hover {
+
+     background: #b94d6d;
+
+     transform: scale(1.08);
+ }
+
+
+ .photo-btn:disabled {
+
+     opacity: 0.3;
+
+     cursor: not-allowed;
+
+     transform: none;
+ }
+
+
+ .photo-counter {
+
+     text-align: center;
+
+     font-size: 13px;
+
+     color: #a4677c;
+
+     margin-bottom: 10px;
+ }
+
+
+ /* =========================
+   Mobile
+========================= */
+
+ @media (max-width: 600px) {
+
+     .photo-viewer {
+
+         gap: 8px;
+     }
+
+     .flip-card {
+
+         width: 100%;
+
+         height: 280px;
+     }
+
+     .photo-btn {
+
+         width: 35px;
+
+         height: 35px;
+
+         font-size: 16px;
+     }
+
+     .flip-back p {
+
+         font-size: 15px;
+
+         line-height: 1.8;
+     }
+
+ }
+
+
+ /* =========================
+   MEMORY TEXT
+========================= */
+
+ #memoryText {
+
+     font-size: 16px;
+
+     line-height: 2;
+
+     color: #71364b;
+ }
+
+
+ /* =========================
+   CLOSE BUTTON
+========================= */
+
+ .close-btn {
+
+     position: absolute;
+
+     top: 12px;
+
+     left: 15px;
+
+     width: 35px;
+
+     height: 35px;
+
+     border: none;
+
+     border-radius: 50%;
+
+     background: #e58aa3;
+
+     color: white;
+
+     font-size: 25px;
+
+     cursor: pointer;
+
+     transition:
+         0.3s ease;
+ }
+
+
+ .close-btn:hover {
+
+     background: #c95373;
+
+     transform:
+         rotate(90deg);
+ }
+
+
+ /* =========================
+   TABLET
+========================= */
+
+ @media (max-width: 700px) {
+
+     .memories {
+
+         grid-template-columns:
+             repeat(2, 1fr);
+
+         gap: 15px;
+     }
+
+
+     .memory-box {
+
+         height: 190px;
+     }
+
+
+     .box-overlay {
+
+         padding: 15px;
+     }
+
+
+     .box-overlay h2 {
+
+         font-size: 16px;
+     }
+
+
+     .box-overlay p {
+
+         font-size: 12px;
+     }
+
+
+     .memory-photos {
+
+         grid-template-columns:
+             1fr;
+     }
+
+
+     .modal-content {
+
+         padding: 25px 18px;
+     }
+ }
+
+
+ /* =========================
+   MOBILE
+========================= */
+
+ @media (max-width: 450px) {
+
+     .memories {
+
+         grid-template-columns:
+             1fr;
+
+         width: 90%;
+     }
+
+
+     .memory-box {
+
+         height: 230px;
+     }
+
+
+     .main-title {
+
+         font-size: 24px;
+     }
+
+
+     .subtitle {
+
+         font-size: 12px;
+
+         margin-bottom: 25px;
+     }
+
+
+     .modal-content h2 {
+
+         font-size: 20px;
+     }
+
+
+     #memoryText {
+
+         font-size: 14px;
+     }
+ }
